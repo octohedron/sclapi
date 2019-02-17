@@ -6,6 +6,7 @@ import re
 import seaborn as sns
 from custom_log import create_logger
 from tensorflow.contrib.learn.python.learn.estimators import run_config
+from dnn_loader import MODEL_DIR
 
 HAVE_COLORLOG = True
 
@@ -13,8 +14,6 @@ HAVE_COLORLOG = True
 logger = create_logger()
 
 # Load all files from a directory in a DataFrame.
-MODEL_DIR = os.path.dirname(
-    os.getcwd() + "/../data/models/DNNClassifier_model")
 
 
 def load_directory_data(directory):
