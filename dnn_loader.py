@@ -15,21 +15,3 @@ config = run_config.RunConfig(
     save_checkpoints_steps=1000,
     keep_checkpoint_max=10
 )
-
-estimator = tf.estimator.DNNClassifier(
-    hidden_units=[500, 100],
-    feature_columns=[embedded_text_feature_column],
-    n_classes=2,
-    optimizer=tf.train.AdagradOptimizer(learning_rate=0.003),
-    config=config)
-
-def input_eval_set(text):
-    td = {}
-    td["sentence"] = []
-    td["sentence"].append(text)
-    dataset = tf.data.Dataset.from_tensor_slices(td)
-    dataset = dataset.batch(1)
-    return dataset.make_one_shot_iterator().get_next()
-
-
-result = estimator.predict(input_fn=input_eval_set, predict_keys="classes")
