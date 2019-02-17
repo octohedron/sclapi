@@ -33,11 +33,3 @@ def input_eval_set(text):
 
 
 result = estimator.predict(input_fn=input_eval_set, predict_keys="classes")
-
-
-
-HAVE_COLORLOG = True
-MODEL_DIR = os.path.dirname(
-    os.getcwd() + "/../data/models/DNNClassifier_model")
-
-
