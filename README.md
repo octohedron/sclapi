@@ -2,6 +2,15 @@
 
 Simple text classifier API.
 
+Classifies English text into `Positive` or `Negative`.
+
+Examples
+
++ `History tells us of glorious friendships in the ancient world.` is `Positive`
++ `There was a man with tongue of wood Who essayed to sing, And in truth it was lamentable` is `Negative`.
++ `Here one of the most atrocious massacres of the West took place.` is `Negative`
++ `What should it be but the most magnificent palace that had ever been seen in the world.` is `Positive`
+
 ## See it in action
 
 Make a `POST` request to `http://datahangar.net/api` with `form-data` field `text` -> `string` i.e. `Today was a wonderful day.` should return `Positive`
