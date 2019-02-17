@@ -15,7 +15,7 @@ Make `POST` request to `http://datahangar.net/api` with `form-data` field `text`
 
 ## Usage
 
-1. Install `tensorflow`, `tensorflow-hub`, `pandas`, `numpy`, `flask`, `flask-cors`, `colorlog`, etc.
+1. Install requirements with `pip3 install -r requeriments.txt`, etc.
 2. Train the model, might require some time depending on computing power, simple as running the script `python3 DNNClassifier.py`
 3. Export flask app, `export FLASK_APP=$(pwd)/api.py`
 4. Run it with `flask run`
